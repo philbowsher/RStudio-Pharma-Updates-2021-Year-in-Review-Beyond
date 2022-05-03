@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title> RStudio Pharma Updates</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="twitter:@rinpharma github:philbowsher" />
+    <script src="RStudio-Pharma-Updates_files/header-attrs-2.10/header-attrs.js"></script>
+    <link rel="stylesheet" href="include/rstudio.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <span style="color:#c6316b"><strong> RStudio Pharma Updates
+## <span style="color:#c6316b"><strong>2021 Year in Review &amp; Beyond</strong></span>
+### <span style="color:#black">twitter:<span class="citation">@rinpharma</span> github:philbowsher</span>
+
+---
+
+
+
+
+
+class: subtitle-slide, white, middle, center
+
+# For the last 7 years, I've helped Many pharmas adopt R. Usage around R in pharma, especially in clinical, has increased rapidly over the last 3 years, as seen at R in Pharma.
+---
+
+
+
+class: subtitle-slide, white, middle, center
+
+# This talk will focus on the top 5 trends I saw in 2021 (as well as RStudio investments available to pharmas now) and make some predictions/thoughts for 2022 &amp; beyond!
+---
+
+
+
+
+
+class: panel-narrow-slide, left
+# RStudio is committed to creating high quality tools to help navigate these top challenges
+- [Package Validation &amp; Management](https://environments.rstudio.com/validation)
+- [Scalable environment management via DevOps &amp; MLOps](https://support.rstudio.com/hc/en-us/articles/360045105794-How-to-set-up-Git-backed-content-deployment-from-a-private-repository-in-RStudio-Connect)
+- [Cloud](https://www.rstudio.com/blog/cloud-strategy/)
+- [Shiny](https://learn.rinpharma.com/shiny4submissions.html)
+- [User Focused Initiatives](https://www.rstudio.com/champion/)
+- Small vs Large Pharmas
+---
+
+class: subtitle-slide, white, middle, center
+
+# Package Validation &amp; Management is still the top focus. This includes balancing the user and IT processes to access and recreate environments.
+---
+
+
+class: panel-narrow-slide, left
+# Package Tools and Info
+- [RStudio Package Validation Guidance](https://www.rstudio.com/solutions/pharma/)
+- [RStudio Package Manager](https://docs.rstudio.com/rspm/admin/appendix/source-details/#curated-cran-source)
+- [Surfacing Packages to users](https://solutions.rstudio.com/data-science-admin/packages/)
+- [Migrating users from desktops to Server environments](https://www.rstudio.com/products/workbench/)
+- [renv](https://rstudio.github.io/renv/articles/renv.html) &amp; [Versioning renv.lock ](https://github.com/philbowsher/studious-octo-eureka/blob/master/renv.lock)
+- [Adding internal packages](https://docs.rstudio.com/rspm/admin/building-packages/)
+- [Internal Package Validation](https://rinpharma.com/publication/rinpharma_236/)
+- [RISK-BASED APPROACH](https://www.pharmar.org/white-paper/)
+- [Freeze repo](https://docs.rstudio.com/rspm/admin/repositories/#repo-versions) &amp; [Example](https://colorado.rstudio.com/rspm/client/#/repos/10/overview)
+
+---
+
+
+class: subtitle-slide, white, middle, center
+
+# Package management is only one part. What about system deps, OS versions...That broader environmental challenge is leading orgs to **containerization as a primitive**.
+---
+
+
+
+class: subtitle-slide, white, middle, center
+
+# The ability to provide many different system configs leads to diverse packaging needs (RSPM). Allowing users to get access to those different containerized env at the same time for different projects/activities leads to k8s
+---
+
+
+
+class: subtitle-slide, white, middle, center
+
+# The next top theme is interest or the move to scalable environment management via DevOps/MLOps. This includes tools for Production Deployments &amp; Team Collaboration such as CI/CD &amp; versioning.
+---
+
+
+class: panel-narrow-slide, left
+# DevOps Tools and Info
+- [Version Control via RStudio](https://www.pharmasug.org/proceedings/2021/AP/PharmaSUG-2021-AP-204.pdf)
+- [Docker](https://environments.rstudio.com/docker)[ &amp; Validated Images to spawn containers &amp; Recipes](https://solutions.rstudio.com/sys-admin/launcher/kubernetes/)
+- [renv](https://rstudio.github.io/renv/articles/renv.html)
+- [Testing via testhat, covr &amp; lintr](https://testthat.r-lib.org/)
+- [RStudio Connect](https://www.rstudio.com/products/connect/) &amp; [Cloud Devops tools](https://medium.com/rstudio-connect-digest/azure-devops-pipelines-for-deploying-content-to-rstudio-connect-e992f49103b6)
+- [Git-backed deployments](https://docs.rstudio.com/connect/user/git-backed/) &amp; [CI/CD](https://www.pharmasug.org/proceedings/2021/AD/PharmaSUG-2021-AD-205.pdf)
+- [Vetiver](https://github.com/tidymodels/vetiver-r)
+- [ETL](https://medium.com/rstudio-connect-digest/basic-builds-how-to-update-data-in-a-shiny-app-on-rstudio-connect-48593902b1e2) &amp; [Pins](https://pins.rstudio.com/)
+
+---
+
+class: subtitle-slide, white, middle, center
+
+# Next up is Cloud migrations...on one axis, scaling the ability of an org to provide flexible computational environemnts to increasingly heterogeneous needsets. The other axis taking advantage of the scale-out capability the cloud offers to bring unprecendented levels of computational resources into the hands of scientists on demand
+---
+
+class: panel-narrow-slide, left
+# Cloud Info
+- [Cloud Strategy](https://www.rstudio.com/blog/cloud-strategy/)
+- [K8s](https://kubernetes.io/) via [aws](https://aws.amazon.com/eks/) &amp; [MS](https://azure.microsoft.com/en-us/services/kubernetes-service/) &amp; [Google](https://kubernetes.soleng.rstudioservices.com/#/overview?namespace=default)
+- [Sagemaker](https://www.rstudio.com/sagemaker/)
+- [VPC](https://aws.amazon.com/vpc/)
+- [RStudio Launcher and Kubernetes](https://solutions.rstudio.com/sys-admin/launcher/kubernetes/)
+
+---
+
+
+class: subtitle-slide, white, middle, center
+
+# 4th is Shiny...
+---
+
+class: panel-narrow-slide, left
+# Shiny
+- [Shiny for Submissions](https://learn.rinpharma.com/shiny4submissions.html)
+- [Productionalizing Shiny Deployments](https://www.pharmasug.org/proceedings/2021/AD/PharmaSUG-2021-AD-205.pdf)
+- [Future of Clinical tfls](https://realtimeclinical.shinyapps.io/rsum/)
+- [Shiny via K8s](https://www.youtube.com/watch?v=H__CTvkI-8w)
+- [Scaling Shiny](https://github.com/philbowsher/Advanced-Shiny-Deployments)
+
+---
+
+
+class: subtitle-slide, white, middle, center
+
+# Last are user focused efforts...
+---
+
+class: panel-narrow-slide, left
+# User enhancements
+- [Upskilling](https://www.rstudio.com/academy/)
+- [Internal Conferences](https://nhsrcommunity.com/) &amp; [R in Pharma Champions](https://www.rstudio.com/champion/)
+- [Clinical Tables via GT](https://gt.rstudio.com/)
+- [Quarto: a scientific and technical publishing system](https://quarto.org/)
+- [renv &amp; git](https://www.pharmasug.org/proceedings/2021/AP/PharmaSUG-2021-AP-204.pdf)
+
+---
+
+
+class: subtitle-slide, white, middle, center
+
+# RStudio recognizes that these are non-trivial challenges. We are committed to making our products adapt to these evolving needs, and also recognize that additional solutions are needed to provide the traceability and visibility into how all the pieces fit together in a compliant yet still scalable way
+---
+
+class: subtitle-slide, white, middle, center
+
+# rstudio conference &amp; rinpharma
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"countIncrementalSlides": true,
+"highlightLines": true,
+"highlightStyle": "github",
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
